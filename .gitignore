@@ -1,0 +1,21 @@
+# 临时文件
+*.tmp
+*.log
+*.bak
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (如果有)
+node_modules/
+
+# 敏感信息（如果有）
+*.secret
+*.env
