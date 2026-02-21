@@ -2,6 +2,36 @@
 
 当收到以下特定 systemEvent 时，执行对应操作：
 
+## ⏰ 每天例行检查（每天 4:00）
+
+当收到包含"⏰ 每天例行检查"的消息时：
+
+1. 运行脚本：`bash /root/.openclaw/workspace/check-daily.sh`
+2. 捕获脚本输出
+3. 如果发现问题（退出码=1），通过飞书发送报告给 Ken（ou_a7195bd3e0508f0e0d09f19ff12a8811）
+4. 使用 `message` 工具，action=send, channel=feishu, target=ou_a7195bd3e0508f0e0d09f19ff12a8811
+5. 报告格式：显示检查结果 + 自动修复情况
+
+## ⏰ 每周中度检查（每周日 4:00）
+
+当收到包含"⏰ 每周中度检查"的消息时：
+
+1. 运行脚本：`bash /root/.openclaw/workspace/check-weekly.sh`
+2. 捕获脚本输出
+3. 无论成功与否，都通过飞书发送报告给 Ken
+4. 使用 `message` 工具，action=send, channel=feishu, target=ou_a7195bd3e0508f0e0d09f19ff12a8811
+5. 报告格式：完整摘要 + 问题列表 + 修复建议
+
+## ⏰ 每月大度检查（每月1日 4:00）
+
+当收到包含"⏰ 每月大度检查"的消息时：
+
+1. 运行脚本：`bash /root/.openclaw/workspace/check-monthly.sh`
+2. 捕获脚本输出
+3. 无论成功与否，都通过飞书发送详细报告给 Ken
+4. 使用 `message` 工具，action=send, channel=feishu, target=ou_a7195bd3e0508f0e0d09f19ff12a8811
+5. 报告格式：完整审计报告 + 趋势分析 + 改进建议
+
 ## ⏰ 天气报告（每天 7:35）
 
 当收到包含"⏰ 天气报告"或"天气提醒任务"的消息时：
