@@ -1,0 +1,22 @@
+{
+  "keys": [
+    {
+      "key": "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",
+      "usage": 1000,
+      "limit": 1000,
+      "status": "exhausted",
+      "note": "原 Key，本月已用完"
+    },
+    {
+      "key": "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",
+      "usage": 0,
+      "limit": 1000,
+      "status": "active",
+      "note": "新 Key #2"
+    }
+  ],
+  "current_index": 1,
+  "total_quota": 2000,
+  "remaining_quota": 1000,
+  "last_updated": "2026-03-15T09:25:00+08:00"
+}
