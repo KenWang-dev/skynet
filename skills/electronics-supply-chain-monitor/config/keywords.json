@@ -1,0 +1,34 @@
+{
+  "searchQueries": {
+    "semiconductor": [
+      "台积电 TSMC 产能",
+      "三星半导体 Samsung",
+      "英特尔 Intel foundry",
+      "中芯国际 SMIC",
+      "芯片短缺 chip shortage"
+    ],
+    "components": [
+      "被动元件 passive components",
+      "MLCC 电容 价格",
+      "电阻 价格波动",
+      "半导体芯片 supply"
+    ],
+    "materials": [
+      "硅晶圆 silicon wafer",
+      "封装材料 packaging materials",
+      "PCB 原材料",
+      "铜 铝 稀土 价格"
+    ],
+    "geopolitics": [
+      "芯片法案 CHIPS Act",
+      "出口管制 export control",
+      "实体清单 Entity List",
+      "中美科技战 China US tech war"
+    ]
+  },
+  "excludedKeywords": [
+    "股票投资",
+    "股市分析",
+    "理财建议"
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "lastUpdate": "2026-03-11",
+  "indicators": {
+    "D1.1": {
+      "name": "LME铜价走势",
+      "status": "red",
+      "value": "$12,675/吨",
+      "threshold": "$10,500红线",
+      "overPercent": "20.7%",
+      "trend": "持续高位",
+      "lastCheck": "2026-03-11"
+    },
+    "D1.2": {
+      "name": "CCL覆铜板价格",
+      "status": "unknown",
+      "value": "无明确数据",
+      "lastCheck": "2026-03-11"
+    },
+    "D1.3": {
+      "name": "PA66工程塑胶价格",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D2.1": {
+      "name": "RMB/USD/EUR汇率波动",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D2.2": {
+      "name": "企业融资成本变化",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D2.3": {
+      "name": "中国劳动力成本趋势",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D3.1": {
+      "name": "AI需求虹吸效应",
+      "status": "red",
+      "value": "PC DRAM合约价Q1飙升",
+      "threshold": "环比涨>50%红灯",
+      "trend": "结构性短缺持续到2027年",
+      "lastCheck": "2026-03-11"
+    },
+    "D3.2": {
+      "name": "晶圆代工稼动率",
+      "status": "yellow",
+      "value": "TSMC 1-2月收入同比+29.9%",
+      "threshold": "85%-92%黄灯",
+      "trend": "产能紧张",
+      "lastCheck": "2026-03-11"
+    },
+    "D3.3": {
+      "name": "半导体芯片行业库存周期",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D4.1": {
+      "name": "出口管制/实体清单变化",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D4.2": {
+      "name": "关税政策变化",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D4.3": {
+      "name": "关键区域冲突升级",
+      "status": "red",
+      "value": "霍尔木兹海峡危机",
+      "details": "伊朗警告任何通过的船只都将被开火，海峡对几乎所有非伊朗相关交通保持关闭",
+      "lastCheck": "2026-03-11"
+    },
+    "D5.1": {
+      "name": "人祸事件（罢工/火灾/爆炸）",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D5.2": {
+      "name": "天灾气候与能源中断",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D5.3": {
+      "name": "社会公共/卫生事件",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D6.1": {
+      "name": "海运成本指数（SCFI/WCI）",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D6.2": {
+      "name": "关键咽喉点通行状态",
+      "status": "red",
+      "value": "霍尔木兹海峡实质性中断",
+      "details": "海峡对几乎所有非伊朗相关交通保持关闭，至少11艘船只遭袭击",
+      "lastCheck": "2026-03-11"
+    },
+    "D6.3": {
+      "name": "关键港口拥堵状态",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D7.1": {
+      "name": "环保法规范围/要求变化",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D7.2": {
+      "name": "产品认证范围/要求变化",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    },
+    "D7.3": {
+      "name": "供应链尽调新规变化",
+      "status": "unknown",
+      "value": "未搜索",
+      "lastCheck": "2026-03-11"
+    }
+  },
+  "summary": {
+    "green": 0,
+    "yellow": 1,
+    "red": 4,
+    "unknown": 16,
+    "overall": "red"
+  }
+}

@@ -1,0 +1,224 @@
+🖥️ 1. 硬件和内核状态
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+系统信息:
+Linux VM-0-12-opencloudos 6.6.117-45.1.oc9.x86_64 #1 SMP Tue Dec 16 11:49:47 CST 2025 x86_64 x86_64 x86_64 GNU/Linux
+
+内核版本:
+6.6.117-45.1.oc9.x86_64
+
+CPU 信息:
+Architecture:                            x86_64
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Model name:                              AMD EPYC 7K62 48-Core Processor
+BIOS Model name:                         3.0  CPU @ 2.0GHz
+Thread(s) per core:                      1
+NUMA node0 CPU(s):                       0,1
+
+内存详情:
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       1.3Gi        71Mi       1.6Mi       754Mi       644Mi
+Swap:          4.0Gi        75Mi       3.9Gi
+
+最近内核错误:
+[    0.198028] ACPI: _OSC evaluation for CPUs failed, trying _PDC
+⚠️ 发现 1 个内核错误
+
+💾 2. 存储系统详情
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+磁盘使用情况:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        40G   27G   13G  68% /
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           982M   24K  982M   1% /dev/shm
+tmpfs           393M  6.4M  387M   2% /run
+tmpfs           197M  8.0K  197M   1% /run/user/0
+
+Inode 使用情况:
+Filesystem       Inodes  IUsed    IFree IUse% Mounted on
+/dev/vda1      20970944 672698 20298246    4% /
+devtmpfs         246441   1389   245052    1% /dev
+tmpfs            251330      7   251323    1% /dev/shm
+tmpfs            819200   1338   817862    1% /run
+tmpfs             50266     22    50244    1% /run/user/0
+
+磁盘 I/O:
+Linux 6.6.117-45.1.oc9.x86_64 (VM-0-12-opencloudos) 	03/01/2026 	_x86_64_	(2 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           1.26    0.00    1.13    1.80    0.00   95.81
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+sr0              0.01      0.03     0.00   0.00    0.37     3.63    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+vda            149.72    933.80    39.01  20.67    2.61     6.24  102.08    792.08    89.31  46.66    3.02     7.76    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.70   2.58
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.25    0.00    1.01    0.00    0.00   98.74
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+sr0              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+vda              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+
+
+超过 100MB 的文件:
+/proc/kcore
+/root/.nvm/versions/node/v22.22.0/bin/node
+/root/.nvm/versions/node/v22.22.0/lib/node_modules/openclaw/node_modules/@node-llama-cpp/linux-x64-cuda/bins/linux-x64-cuda/libggml-cuda.so
+/root/.nvm/versions/node/v22.22.0/lib/node_modules/openclaw/node_modules/@node-llama-cpp/linux-x64-cuda-ext/bins/linux-x64-cuda/fallback/libggml-cuda.so
+/root/.npm/_cacache/tmp/git-clonenW5zjn/node_modules/@node-llama-cpp/linux-x64-cuda/bins/linux-x64-cuda/libggml-cuda.so
+/root/.npm/_cacache/tmp/git-clonenW5zjn/node_modules/@node-llama-cpp/linux-x64-cuda-ext/bins/linux-x64-cuda/fallback/libggml-cuda.so
+/root/.npm/_cacache/content-v2/sha512/b6/87/a9bcb7178e069013f406213847043e7c8db1c60564f58e16e52640a36014477d538efba9ff3e656c26dfb231fbb967ddc0da017c60ebd5c995cd5e61a8e6
+/root/.npm/_cacache/content-v2/sha512/c1/0c/204a5ed09bcbc7e7aa01b7b22e5960cd36c0c40a454c4b4d340bddb09773e46f38f0645896cde8706be905f0baf60413220893642399c469b8581f744dd9
+/root/.npm/_cacache/content-v2/sha512/92/78/30a2ad4a76ba92aff6fafad9f98dbb461c8d2d6675b9c287cab2c672f8897681edde37d168c0a6d71b8147e39da0eaa4925680dc700a13bd83b1c8bc97fb
+/root/.npm/_cacache/content-v2/sha512/98/38/f256e9424d1622966f449a6de50ccc7b75b235bf31aa936f0f8f6f2c85aaed8c445352ef1a50d0d83a654a34c2e950a4b56a4c3bbf2d25305f2de2ab30c5
+
+🌐 3. 网络详细分析
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+网络接口:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 52:54:00:33:6e:b0 brd ff:ff:ff:ff:ff:ff
+    altname enp0s5
+    altname ens5
+    inet 10.3.0.12/22 brd 10.3.3.255 scope global noprefixroute eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7c2a:929d:5e35:30ba/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+路由表:
+default via 10.3.0.1 dev eth0 proto dhcp src 10.3.0.12 metric 100 
+10.3.0.0/22 dev eth0 proto kernel scope link src 10.3.0.12 metric 100 
+
+监听端口:
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1183/sshd: /usr/sbi 
+tcp        0      0 127.0.0.1:18792         0.0.0.0:*               LISTEN      9907/openclaw-gatew 
+tcp        0      0 127.0.0.1:18789         0.0.0.0:*               LISTEN      9907/openclaw-gatew 
+tcp6       0      0 ::1:18789               :::*                    LISTEN      9907/openclaw-gatew 
+tcp6       0      0 :::22                   :::*                    LISTEN      1183/sshd: /usr/sbi 
+
+网络连接统计:
+     60 CONNECTED
+     13 STREAM
+      7 ESTABLISHED
+      6 TIME_WAIT
+      5 LISTEN
+      4 
+      1 SEQPACKET
+      1 I-Node
+      1 Foreign
+      1 established)
+      1 and
+      1 84444
+      1 8346
+      1 7376
+      1 728269
+      1 7
+      1 26864
+      1 24967
+
+🔧 4. 进程和资源审计
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+资源占用 Top 10:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root        9907  0.2 23.8 23210868 478896 pts/2 Dl+  Feb28   0:53 openclaw-gateway
+root        3237  0.5  2.5 1024712 50796 ?       Sl   Feb28   2:06 /usr/local/qcloud/YunJing/YDEyes/YDService
+root        9893  0.0  0.7 1012988 14152 pts/2   Sl+  Feb28   0:00 openclaw
+root        3183  0.9  0.6 1107304 13864 ?       Sl   Feb28   3:14 barad_agent
+root           1  0.0  0.4  32132  8416 ?        Ss   Feb28   0:07 /usr/lib/systemd/systemd --switched-root --system --deserialize=41
+root        3215  0.0  0.3 1314752 7188 ?        Sl   Feb28   0:05 /usr/local/qcloud/YunJing/YDLive/YDLive
+root        3182  0.0  0.3  45660  6940 ?        S    Feb28   0:19 barad_agent
+root         743  0.0  0.2  22452  5168 ?        Ss   Feb28   0:00 /usr/lib/systemd/systemd --user
+root       85985  0.0  0.2  12000  4616 ?        R    04:01   0:00 ps aux --sort=-%mem
+root         527  0.0  0.2  35028  4456 ?        Ss   Feb28   0:00 /usr/lib/systemd/systemd-journald
+
+OpenClaw 进程树:
+openclaw(9893)-+-openclaw-gatewa(9907)-+-bash(85826)-+-pstree(85990)
+               |                       |             `-tee(85829)
+               |                       |-{openclaw-gatewa}(9908)
+               |                       |-{openclaw-gatewa}(9909)
+               |                       |-{openclaw-gatewa}(9910)
+               |                       |-{openclaw-gatewa}(9911)
+               |                       |-{openclaw-gatewa}(9912)
+               |                       |-{openclaw-gatewa}(9916)
+               |                       |-{openclaw-gatewa}(9966)
+               |                       |-{openclaw-gatewa}(9967)
+               |                       |-{openclaw-gatewa}(9977)
+               |                       |-{openclaw-gatewa}(9978)
+               |                       |-{openclaw-gatewa}(10038)
+               |                       |-{openclaw-gatewa}(10039)
+               |                       |-{openclaw-gatewa}(10040)
+               |                       `-{openclaw-gatewa}(10041)
+               |-{openclaw}(9894)
+               |-{openclaw}(9895)
+               |-{openclaw}(9896)
+               |-{openclaw}(9897)
+               |-{openclaw}(9898)
+               `-{openclaw}(9906)
+
+文件描述符使用:
+PID 9893: 27 个文件描述符
+PID 9907: 41 个文件描述符
+PID 85826: 9 个文件描述符
+PID 85829: 7 个文件描述符
+
+🔒 5. 安全审计
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+最近登录记录:
+root     pts/1        orcaterm         Sat Feb 28 22:08 - 22:51  (00:42)
+root     pts/0        orcaterm         Sat Feb 28 22:08 - 22:51  (00:43)
+reboot   system boot  6.6.117-45.1.oc9 Sat Feb 28 22:08   still running
+root     pts/5        orcaterm         Sat Feb 28 22:06 - down   (00:00)
+root     pts/4        orcaterm         Sat Feb 28 22:06 - down   (00:00)
+root     pts/6        orcaterm         Sat Feb 28 22:06 - down   (00:00)
+root     pts/3        orcaterm         Sat Feb 28 21:52 - 22:06  (00:14)
+root     pts/1        orcaterm         Sat Feb 28 21:52 - 22:06  (00:14)
+root     pts/3        orcaterm         Sat Feb 28 20:52 - 21:49  (00:56)
+root     pts/1        orcaterm         Sat Feb 28 20:52 - 21:49  (00:57)
+
+wtmp begins Wed Feb  4 15:04:37 2026
+
+失败的登录:
+
+可疑开放端口:
+
+22
+18789
+18792
+
+📦 6. 应用状态深度检查
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+定时任务状态:
+*/5 * * * * flock -xn /tmp/stargate.lock -c '/usr/local/qcloud/stargate/admin/start.sh > /dev/null 2>&1 &'
+
+📈 7. 系统趋势分析
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+平均负载趋势:
+ 04:01:20 up  5:52,  0 user,  load average: 0.70, 0.19, 0.06
+
+系统运行时间:
+2026-02-28 22:08:24
+
+🧹 8. 深度清理
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+清理 YUM 缓存:
+✅ YUM 缓存已清理
+✅ 清理 30 天前的旧日志
+✅ 清理 14 天前的临时文件
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 每月大度检查总结
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+严重问题: 0
+警告: 1
+
+📄 完整报告已保存到: /root/.openclaw/workspace/monthly-report-20260301.txt
+
+⚠️ 系统基本正常，有 1 个警告

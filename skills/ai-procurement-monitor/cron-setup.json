@@ -1,0 +1,40 @@
+{
+  "job": {
+    "name": "AI采购最佳实践周报",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 14 * * 5",
+      "tz": "Asia/Shanghai"
+    },
+    "payload": {
+      "kind": "agentTurn",
+      "message": "生成AI采购监控周报。请执行以下任务：\n\n1. 读取 /root/.openclaw/workspace/skills/ai-procurement-monitor/SKILL.md 了解监控框架\n2. 运行 bash /root/.openclaw/workspace/skills/ai-procurement-monitor/run.sh 收集数据\n3. 分析搜索结果，按照7个维度整理情报\n4. 生成结构化周报（包含Top 5核心发现、维度详述、洞察与建议）\n5. 通过飞书发送给 ou_a7195bd3e0508f0e0d09f19ff12a8811\n\n报告要求：\n- 语言：简体中文\n- 排版：清晰易读，关键信息加粗\n- 长度：宁缺毋滥，无重大动态时明确说明\n- 发送时间：周五14:00左右",
+      "model": "zai/glm-4.7",
+      "thinking": "high",
+      "timeoutSeconds": 600
+    },
+    "sessionTarget": "isolated",
+    "enabled": true
+  },
+  "setup_instructions": {
+    "step1": "验证脚本权限：chmod +x /root/.openclaw/workspace/skills/ai-procurement-monitor/run.sh",
+    "step2": "手动测试：bash /root/.openclaw/workspace/skills/ai-procurement-monitor/run.sh",
+    "step3": "设置cron任务：使用 cron 工具的 add 动作，传入上述 job 对象",
+    "step4": "验证任务：使用 cron 工具的 list 动作查看任务列表",
+    "step5": "查看执行历史：使用 cron 工具的 runs 动作查看执行记录"
+  },
+  "schedule_explanation": {
+    "cron_expr": "0 14 * * 5",
+    "meaning": "每周五14:00执行",
+    "timezone": "Asia/Shanghai (GMT+8)",
+    "next_run": "查看系统当前时间，计算下一个周五14:00"
+  },
+  "payload_explanation": {
+    "kind": "agentTurn",
+    "purpose": "在独立会话中执行监控任务，不影响主会话",
+    "message": "完整的任务指令，包含执行步骤和报告要求",
+    "model": "使用 zai/glm-4.7 模型",
+    "thinking": "high - 深度思考模式，用于复杂分析和报告生成",
+    "timeoutSeconds": "600 - 10分钟超时，确保有足够时间收集和分析数据"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "job": {
+    "name": "全球采购真实心声周报",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 16 * * 6",
+      "tz": "Asia/Shanghai"
+    },
+    "payload": {
+      "kind": "agentTurn",
+      "message": "生成全球采购真实心声监控周报。请执行以下任务：\n\n1. 读取 /root/.openclaw/workspace/skills/global-procurement-voice-monitor/SKILL.md 了解监控框架\n2. 运行 bash /root/.openclaw/workspace/skills/global-procurement-voice-monitor/run.sh 收集数据\n3. 分析搜索结果，按照6个维度（D1-D6）整理心声语料\n4. 生成结构化周报（包含采集概览、维度分布、TOP 5高频话题、情绪预警、培训需求信号）\n5. 通过飞书发送给 ou_a7195bd3e0508f0e0d09f19ff12a8811\n\n报告要求：\n- 语言：简体中文\n- 排版：清晰易读，关键数据加粗，使用emoji标注情绪级别\n- 长度：数据驱动，有原始语料支撑，不编造推断\n- 核心原则：先收集后归纳，严禁\"定向证据采集\"\n- 发送时间：周六16:00左右",
+      "model": "zai/glm-4.7",
+      "thinking": "high",
+      "timeoutSeconds": 600
+    },
+    "sessionTarget": "isolated",
+    "enabled": true
+  },
+  "setup_instructions": {
+    "step1": "验证脚本权限：chmod +x /root/.openclaw/workspace/skills/global-procurement-voice-monitor/run.sh",
+    "step2": "手动测试：bash /root/.openclaw/workspace/skills/global-procurement-voice-monitor/run.sh",
+    "step3": "设置cron任务：使用 cron 工具的 add 动作，传入上述 job 对象",
+    "step4": "验证任务：使用 cron 工具的 list 动作查看任务列表",
+    "step5": "查看执行历史：使用 cron 工具的 runs 动作查看执行记录"
+  },
+  "schedule_explanation": {
+    "cron_expr": "0 16 * * 6",
+    "meaning": "每周六16:00执行",
+    "timezone": "Asia/Shanghai (GMT+8)",
+    "rationale": "避免与周五14:00的AI采购周报冲突，给用户一天间隔"
+  },
+  "payload_explanation": {
+    "kind": "agentTurn",
+    "purpose": "在独立会话中执行监控任务，不影响主会话",
+    "message": "完整的任务指令，包含执行步骤、报告要求和核心原则",
+    "model": "使用 zai/glm-4.7 模型",
+    "thinking": "high - 深度思考模式，用于复杂分析和语料归纳",
+    "timeoutSeconds": "600 - 10分钟超时，确保有足够时间收集和分析数据"
+  },
+  "monitoring_framework": {
+    "dimensions": 6,
+    "indicators_per_dimension": 3,
+    "total_searches": 16,
+    "platforms_covered": ["LinkedIn", "Reddit", "知乎", "小红书", "脉脉", "CIPS", "ISM", "Glassdoor"],
+    "regions": ["中国", "印度", "北美/欧洲"],
+    "roles": ["执行层", "中层管理", "高层决策"]
+  }
+}
