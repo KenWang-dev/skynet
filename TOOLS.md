@@ -89,59 +89,56 @@ feishu_doc({
 
 ## 搜索引擎配置
 
-### 优先级
-1. **Brave Search**（首选）
-   - **工具**：`web_search`
-   - **API Key**：已配置（`/root/.openclaw/.env` 和 `openclaw.json`）
-   - **特点**：
-     - 快速搜索（约1秒）
-     - 支持区域过滤（country参数）
-     - 支持时间过滤（freshness参数）
-     - 返回标题、URL、摘要、发布时间
-   - **适用场景**：
-     - 日常快速搜索
-     - 新闻查询
-     - 简单关键词搜索
+### 存储位置
+- **Tavily Key 池**：`/root/.openclaw/workspace/tavily-key-pool.json`
+- **Tavily 管理脚本**：`/root/.openclaw/workspace/tavily-pool.py`
+- **Brave API Key**：`/root/.openclaw/.env` 和 `openclaw.json`
 
-2. **Tavily Search**（备用）
-   - **工具**：`tavily`（技能）
-   - **API Key 轮换池**：`/root/.openclaw/workspace/tavily-key-pool.json`
-   - **管理脚本**：`python3 /root/.openclaw/workspace/tavily-pool.py`
-   - **特点**：
-     - AI 优化，专为 AI 代理设计
-     - Deep Research 模式（多源验证）
-     - 更适合复杂查询
-     - **支持多 Key 自动轮换**
-   - **适用场景**：
-     - 深度研究
-     - 多维度分析
-     - 复杂查询
-     - 监控任务（大多数监控技能使用 Tavily）
-   
-   **轮换池命令**：
-   ```bash
-   # 查看状态
-   python3 /root/.openclaw/workspace/tavily-pool.py status
-   
-   # 获取当前可用 Key
-   python3 /root/.openclaw/workspace/tavily-pool.py get
-   
-   # 添加新 Key
-   python3 /root/.openclaw/workspace/tavily-pool.py add "tvly-dev-xxx..." "备注"
-   
-   # 每月重置（cron 自动执行）
-   python3 /root/.openclaw/workspace/tavily-pool.py reset
-   ```
+### 优先级策略（2026-03-15 更新）
 
-### 使用原则（适用于所有监控任务）
-- **默认优先 Brave Search** - 所有监控任务首选
-- **仅在以下情况使用 Tavily**：
-  - Brave 无法满足需求（结果不足、质量不够）
-  - 需要深度研究和多源验证
-  - 复杂的多维度分析查询
+| 场景 | 使用引擎 | 模式 | 说明 |
+|------|----------|------|------|
+| 日常监控任务 | **Tavily** | 普通模式 | 快速、AI 优化 |
+| 重要监控任务 | **Tavily** | **Deep 模式** | 多源验证、深度分析 |
+| 特殊/关键任务 | **Brave Search** | 标准 | 快速、稳定、无配额限制 |
+| Tavily 配额用尽 | Brave Search | 标准 | 自动降级 |
 
-**配置时间**：2026-03-07
-**状态**：✅ Brave Search 已测试通过
+### 1. Tavily Search（首选）
+- **工具**：`tavily`（技能）
+- **API Key 轮换池**：6 个 Key，共 **6000 次/月**
+- **管理脚本**：`python3 /root/.openclaw/workspace/tavily-pool.py`
+- **模式**：
+  - **普通模式**：快速搜索，适合日常监控
+  - **Deep 模式**：多源验证，适合重要任务
+- **特点**：
+  - AI 优化，专为 AI 代理设计
+  - 支持多 Key 自动轮换（用量 > 90% 自动切换）
+  - 每月 1 日自动重置配额
+
+### 2. Brave Search（备用/关键任务）
+- **工具**：`web_search`
+- **特点**：
+  - 快速搜索（约1秒）
+  - 无配额限制
+  - 支持区域/时间过滤
+
+### 轮换池命令
+```bash
+# 查看状态
+python3 /root/.openclaw/workspace/tavily-pool.py status
+
+# 获取当前可用 Key
+python3 /root/.openclaw/workspace/tavily-pool.py get
+
+# 添加新 Key
+python3 /root/.openclaw/workspace/tavily-pool.py add "tvly-dev-xxx..." "备注"
+
+# 每月重置（cron 自动执行）
+python3 /root/.openclaw/workspace/tavily-pool.py reset
+```
+
+**配置时间**：2026-03-15
+**状态**：✅ Tavily 轮换池已配置（6 Key, 6000 次/月）
 
 ## 外部文档引用
 
