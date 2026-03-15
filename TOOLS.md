@@ -90,9 +90,10 @@ feishu_doc({
 ## 搜索引擎配置
 
 ### 存储位置
-- **Tavily Key 池**：`/root/.openclaw/workspace/tavily-key-pool.json`
+- **Tavily Key 池**：`/root/.openclaw/workspace/tavily-key-pool.json`（只存状态）
+- **Tavily 实际 Key**：`/root/.openclaw/.env`（敏感信息，不提交 git）
 - **Tavily 管理脚本**：`/root/.openclaw/workspace/tavily-pool.py`
-- **Brave API Key**：`/root/.openclaw/.env` 和 `openclaw.json`
+- **Brave API Key**：`/root/.openclaw/.env`
 
 ### 优先级策略（2026-03-15 更新）
 
