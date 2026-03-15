@@ -5,18 +5,46 @@
       "usage": 1000,
       "limit": 1000,
       "status": "exhausted",
-      "note": "原 Key，本月已用完"
+      "note": "\u539f Key\uff0c\u672c\u6708\u5df2\u7528\u5b8c"
     },
     {
       "key": "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",
       "usage": 0,
       "limit": 1000,
       "status": "active",
-      "note": "新 Key #2"
+      "note": "\u65b0 Key #2"
+    },
+    {
+      "key": "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",
+      "usage": 0,
+      "limit": 1000,
+      "status": "standby",
+      "note": "Key #3"
+    },
+    {
+      "key": "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",
+      "usage": 0,
+      "limit": 1000,
+      "status": "standby",
+      "note": "Key #4"
+    },
+    {
+      "key": "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",
+      "usage": 0,
+      "limit": 1000,
+      "status": "standby",
+      "note": "Key #5"
+    },
+    {
+      "key": "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",
+      "usage": 0,
+      "limit": 1000,
+      "status": "standby",
+      "note": "Key #6"
     }
   ],
   "current_index": 1,
-  "total_quota": 2000,
-  "remaining_quota": 1000,
-  "last_updated": "2026-03-15T09:25:00+08:00"
+  "total_quota": 6000,
+  "remaining_quota": 5000,
+  "last_updated": "2026-03-15T09:32:49.173605"
 }
