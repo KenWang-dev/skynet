@@ -141,6 +141,12 @@ python3 /root/.openclaw/workspace/tavily-pool.py reset
 **配置时间**：2026-03-15
 **状态**：✅ Tavily 轮换池已配置（6 Key, 6000 次/月）
 
+### OpenAI 兼容 API（用于 digest.ts 等脚本）
+- **Base URL**：`http://newapi.epsq.cn/v1`
+- **Model**：`glm-5`
+- **配置位置**：`/root/.openclaw/.env`
+- **用途**：digest.ts 摘要生成、其他需要 OpenAI 兼容接口的脚本
+
 ## 外部文档引用
 
 ### Claude Code 使用技巧

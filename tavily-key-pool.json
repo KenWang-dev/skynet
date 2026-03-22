@@ -9,7 +9,7 @@
     },
     {
       "env_key": "TAVILY_KEY_2",
-      "usage": 64,
+      "usage": 593,
       "limit": 1000,
       "status": "active",
       "note": "\u65b0 Key #2"
@@ -52,7 +52,7 @@
   ],
   "current_index": 1,
   "total_quota": 7000,
-  "remaining_quota": 5936,
-  "last_updated": "2026-03-15T16:01:23.731460",
+  "remaining_quota": 5407,
+  "last_updated": "2026-03-22T16:19:06.575963",
   "_security_note": "\u5b9e\u9645 API Key \u5b58\u50a8\u5728 /root/.openclaw/.env \u4e2d\uff0c\u6b64\u5904\u53ea\u5b58\u50a8\u73af\u5883\u53d8\u91cf\u540d\u548c\u4f7f\u7528\u72b6\u6001"
 }

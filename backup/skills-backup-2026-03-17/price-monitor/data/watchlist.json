@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "mpn": "STM32F103C8T6",
+      "description": "STM32 32位微控制器",
+      "added_at": "2026-03-16T13:00:00Z",
+      "enabled": true
+    },
+    {
+      "mpn": "ESP32-S3-WROOM-1",
+      "description": "ESP32-S3 WiFi模块",
+      "added_at": "2026-03-16T13:00:00Z",
+      "enabled": true
+    },
+    {
+      "mpn": "CH340G",
+      "description": "USB转串口芯片",
+      "added_at": "2026-03-16T13:00:00Z",
+      "enabled": true
+    }
+  ],
+  "max_items": 10
+}

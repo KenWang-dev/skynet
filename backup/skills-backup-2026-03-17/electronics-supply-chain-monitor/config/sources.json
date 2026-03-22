@@ -1,0 +1,44 @@
+{
+  "sources": {
+    "industryMedia": [
+      {
+        "name": "EE Times",
+        "url": "https://www.eetimes.com",
+        "focus": "半导体行业新闻",
+        "priority": "high"
+      },
+      {
+        "name": "DigiTimes",
+        "url": "https://www.digitimes.com",
+        "focus": "亚洲供应链",
+        "priority": "high"
+      }
+    ],
+    "research": [
+      {
+        "name": "TrendForce",
+        "url": "https://www.trendforce.com",
+        "focus": "市场研究",
+        "priority": "medium"
+      },
+      {
+        "name": "IC Insights",
+        "url": "https://icinsights.com",
+        "focus": "半导体市场分析",
+        "priority": "medium"
+      }
+    ],
+    "community": [
+      {
+        "name": "Reddit /r/Electronics",
+        "url": "https://reddit.com/r/Electronics",
+        "focus": "工程师社区",
+        "priority": "low"
+      }
+    ]
+  },
+  "backupSources": {
+    "searchEngine": "Brave Search",
+    "fallback": "Google News"
+  }
+}
